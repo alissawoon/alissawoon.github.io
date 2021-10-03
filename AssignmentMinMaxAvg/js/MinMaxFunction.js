@@ -1,10 +1,14 @@
-var arr = [2,15,42,132,153];
-var max = arr[0];
-var min = arr[0];
-var average = 0; 
+var arr = [];
 
-function minMaxAvg(arr) {
-    
+for (var i = 0; i <5; i++) 
+{
+  arr.push(+prompt('Enter number ' + (i+1)));
+}
+
+function minMaxAvg(arr) {        
+  var max = arr[0];
+  var min = arr[0];
+  var average = 0;
     for (var i = 0; i < arr.length; i++) 
     {
       if (arr[i] < min)
@@ -16,6 +20,6 @@ function minMaxAvg(arr) {
       average += arr[i];
     }
     /*return {max, min, avg}; */
-      return ("You have a preset array   "+ arr +"<br/>Min: " + min + "<br/> Max: " + max + "<br/> Average: " + average/arr.length)
+    return ("Min:" + min + "<br/> Max: " + max + "<br/> Average: " + average/arr.length) 
 }
 document.write(minMaxAvg(arr))
