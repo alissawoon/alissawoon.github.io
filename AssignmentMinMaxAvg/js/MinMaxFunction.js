@@ -2,7 +2,7 @@ var arr = [];
 
 for (var i = 0; i <5; i++) 
 {
-  arr.push(+prompt('Enter number ' + (i+1)));
+  arr.push(+prompt('Enter your preferred number ' + (i+1)));
 }
 
 function minMaxAvg(arr) {        
@@ -22,4 +22,5 @@ function minMaxAvg(arr) {
     /*return {max, min, avg}; */
     return ("Min:" + min + "<br/> Max: " + max + "<br/> Average: " + average/arr.length) 
 }
+
 document.write(minMaxAvg(arr))
