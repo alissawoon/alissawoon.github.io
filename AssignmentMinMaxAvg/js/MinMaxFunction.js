@@ -1,4 +1,4 @@
-var arr = [10, 15, 20, 25, 38, 59, 73, 81, 92, 102];
+var arr = [2,15,42,132,153];
 var max = arr[0];
 var min = arr[0];
 var average = 0; 
@@ -16,6 +16,6 @@ function minMaxAvg(arr) {
       average += arr[i];
     }
     /*return {max, min, avg}; */
-      return ("Min: " + min + "<br/> Max: " + max + "<br/> Average: " + average/arr.length)
+      return ("You have an preset array   "+ arr +"<br/>Min: " + min + "<br/> Max: " + max + "<br/> Average: " + average/arr.length)
 }
 document.write(minMaxAvg(arr))
