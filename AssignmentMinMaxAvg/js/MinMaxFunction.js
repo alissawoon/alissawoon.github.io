@@ -5,7 +5,7 @@ for (var i = 0; i <5; i++)
   arr.push(+prompt('Kindly key in your preferred number ' + (i+1)));
 }
 
-function minMaxAvg(arr) {        
+function minMaxAvg(arr) {          
   var max = arr[0];
   var min = arr[0];
   var average = 0;
