@@ -17,7 +17,7 @@ elLocate.addEventListener("click", function(){
             let elSunway = document.getElementById("sunway")
 
             let userLat = position.coords.latitude
-            let userLong = position.coords.latitude
+            let userLong = position.coords.longitude
 
             let distances = calculateDistance(userLat, userLong)
 
