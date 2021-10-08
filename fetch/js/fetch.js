@@ -7,44 +7,50 @@ function LoadUser(){
         let fn = document.getElementById("firstName")
         let ln = document.getElementById("lastName")
         let phone = document.getElementById("phone")
-        let img = document.getElementById("userImg")
+        let img = document.getElementById("userImg") 
+        // fetch the element 
 
         fn.innerHTML = data.results[0].name.first
         ln.innerHTML = data.results[0].name.last
         phone.innerHTML = data.results[0].phone
         img.src = data.results[0].picture.large
+        // fn.innerhtml is the properties
+        // update the content of the element
+        // devtool>network>getmultipleuser>results10>response>server return a result string in text form
     })
 }
 
-let elLoadUser = document.getElementById("getRandomUser")
-elLoadUser.addEventListener("click", function(){
-    LoadUser()
+let elLoadUser = document.getElementById("getRandomUser") // element
+elLoadUser.addEventListener("click", function(){ // attach event listener for button getrandomuser
+    LoadUser() // function name for load another user
 })
 
 let elLoadMultipleUsers = document.getElementById("getMultipleUser")
 elLoadMultipleUsers.addEventListener("click",function(){
-    let userCount = document.getElementById("userCount")
-    LoadMultipleUsers(userCount.value)
+    let userCount = document.getElementById("userCount") // get the user count that need to fetch
+    LoadMultipleUsers(userCount.value) // setup function name for load multiple users w the selected usercountvalue
 })
 
+// function setup in detailed breakdown for load multiple users
 function LoadMultipleUsers(userCount){
     let url = "https://randomuser.me/api/?results=" + userCount
-    let temp = ""
+    let temp = "" // variable equals to empty string
 
     fetch(url)
-    .then((response) => response.json())
-    .then(azad => {
+    .then((response) => response.json()) // call the response text from server network and convert to json object
+    .then(azad => { // send it to variable azad; can also use "data" to replace "azad"; is just assigning the object name
         let allUsers = document.getElementById("allUsers")
         
+        // create forloop; object oriented model need use x.bla.bla
         for(let i = 0; i < azad.results.length; i++){
-            let fn = '<div>' + azad.results[i].name.first + '</div>'
+            let fn = '<div>' + azad.results[i].name.first + '</div>' //.results.name.first is very dependent on ur api documentation; can abstract data from "preview"
             let ln = '<div>' + azad.results[i].name.last + '</div>'
             let phone = '<div>' + azad.results[i].phone + '</div>'
             let img = '<img src="' + azad.results[i].picture.large + '">'
 
             temp = temp + fn + ln + phone + img
         }
-        allUsers.innerHTML = temp        
+        allUsers.innerHTML = temp      
     })
 }
 
