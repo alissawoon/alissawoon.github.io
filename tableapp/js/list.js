@@ -18,7 +18,6 @@ function GetBooking() {
                 bookingNameList.deleteRow(k)
             }
 
-
             //load all rows from Sheety API
             for(let i=0; i < json.bookings.length; i++){
                 let gName = json.booking[i].name;
@@ -29,12 +28,11 @@ function GetBooking() {
 
                 let row = bookingNameList.insertRow(bookingNameList.rows.length)
                 row.insertCell(0).innerHTML = gId
-                row.insertCell(0).innerHTML = gName
-                row.insertCell(0).innerHTML = gEmail
-                row.insertCell(0).innerHTML = gPax
-                row.insertCell(0).innerHTML = gRemarks
-                row.insertCell(0).innerHTML = ""
-
+                row.insertCell(1).innerHTML = gName
+                row.insertCell(2).innerHTML = gEmail
+                row.insertCell(3).innerHTML = gPax
+                row.insertCell(4).innerHTML = gRemarks
+                row.insertCell(5).innerHTML = ""
             }
         });
 }
