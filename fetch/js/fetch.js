@@ -22,13 +22,13 @@ function LoadUser(){
 
 let elLoadUser = document.getElementById("getRandomUser") // element
 elLoadUser.addEventListener("click", function(){ // attach event listener for button getrandomuser
-    LoadUser() // function name for load another user
+    LoadUser() // call loadUser
 })
 
 let elLoadMultipleUsers = document.getElementById("getMultipleUser")
 elLoadMultipleUsers.addEventListener("click",function(){
     let userCount = document.getElementById("userCount") // get the user count that need to fetch
-    LoadMultipleUsers(userCount.value) // setup function name for load multiple users w the selected usercountvalue
+    LoadMultipleUsers(userCount.value) // call for loadmultipleusers w the selected usercountvalue
 })
 
 // function setup in detailed breakdown for load multiple users
@@ -56,7 +56,7 @@ function LoadMultipleUsers(userCount){
 
 let elLoadGender = document.getElementById("getGenderUser")
 elLoadGender.addEventListener("click",function(){
-    console.log("Load Gender clicked!")
+    console.log("Load Gender clicked!") // to check under console upon clicked, will display this
     // get the gender
     let gender = document.getElementById("userGender")
     console.log("Selected Gender: " + gender.value)
@@ -65,7 +65,7 @@ elLoadGender.addEventListener("click",function(){
     let count = document.getElementById("userGenderCount")
     console.log("Count: " + count.value)
 
-    // call loadGender() and pass gender and number of result
+    // call loadGender() and pass gender and number of result to create function
     loadGender(gender.value,count.value)
 })
 
