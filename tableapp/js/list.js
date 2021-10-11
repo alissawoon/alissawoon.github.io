@@ -4,7 +4,7 @@ refreshNowBtn.addEventListener("click", function () {
 })
 
 function GetBooking() {
-    let url = 'https://api.sheety.co/4a8177f0d446efd0cb69016794c074ed/bookingApp/bookings';
+    let url = 'https://api.sheety.co/b9b23bacbce0fa05289abc34d8cf52e6/bookingApp2/bookings';
     fetch(url)
         .then((response) => response.json())
         .then(json => {
@@ -14,17 +14,17 @@ function GetBooking() {
             let bookingNameList = document.getElementById("bookingNameList")
 
             //delete all rows in the table
-            for(let k = bookingNameList.rows.length - 1; k>0; k--){
+            for(let k = bookingNameList.rows.length - 1; k > 0; k--){
                 bookingNameList.deleteRow(k)
             }
 
             //load all rows from Sheety API
-            for(let i=0; i < json.bookings.length; i++){
-                let gName = json.booking[i].name;
-                let gName = json.booking[i].email;
-                let gName = json.booking[i].pax;
-                let gName = json.booking[i].remarks;
-                let gName = json.booking[i].id;
+            for(let i = 0; i < json.bookings.length; i++){
+                let gName = json.bookings[i].name;
+                let gEmail = json.bookings[i].email;
+                let gPax = json.bookings[i].pax;
+                let gRemarks = json.bookings[i].remarks;
+                let gId = json.bookings[i].id;
 
                 let row = bookingNameList.insertRow(bookingNameList.rows.length)
                 row.insertCell(0).innerHTML = gId
