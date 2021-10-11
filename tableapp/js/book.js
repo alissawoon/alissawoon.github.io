@@ -37,6 +37,5 @@ function BookNow(userName, userEmail, userPax, userRemarks){
     // Do something with object
     console.log(json.booking);
         alert(json.booking.name + " added in the list!")
-    }
   });
 }
