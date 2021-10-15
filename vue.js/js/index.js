@@ -45,6 +45,38 @@ let app4 = new Vue ({
 let app5 = new Vue ({
     el: "#app5",
     data: {
-        message: "Hello World!" //when change in box, would also change on top
+        message: "Hello World!", //when change in box, would also change on top
+        groceryList: [
+            {
+                id: 1,
+                desc: "Rocket Salad"  
+            },
+            {
+                id: 2,
+                desc: "Cheese"  
+            },
+            {
+                id: 3,
+                desc: "Ramen"  
+            },
+            {
+                id: 4,
+                desc: "Ice Lemon Tea"  
+            }           
+        ],
+        orderList: [
+            {
+                id: 1,
+                desc: "nasi lemak"
+            },
+            {
+                id: 2,
+                desc: "nasi kerabu"
+            },
+            {
+                id: 3,
+                desc: "rojak ayam"
+            }           
+        ]
     }
 })
