@@ -11,7 +11,7 @@ loginButton.addEventListener("click", (e) => {
     if (username === "admin" && password === "123") {
         alert("You have successfully logged in.");
         //window.location.href = "/homepage-logined.html";
-        window.location.assign("FinalProjectBooking/homepage-logined.html")
+        window.location.assign("homepage-logined.html")
     } else {
         loginErrorMsg.style.opacity = 1;
     }
