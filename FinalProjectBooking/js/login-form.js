@@ -10,7 +10,7 @@ loginButton.addEventListener("click", (e) => {
 
     if (username === "admin" && password === "123") {
         alert("You have successfully logged in.");
-        window.location.href = "https://alissawoon.github.io/FinalProjectBooking/homepage-logined.html";
+        window.location.href = "alissawoon.github.io/FinalProjectBooking/homepage-logined.html";
     } else {
         loginErrorMsg.style.opacity = 1;
     }
